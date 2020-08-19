@@ -5,3 +5,7 @@ def is_symmetric(string) :
             return False
         i += 1
     return True
+
+test_1 = 'batman'
+print('Test: Is {} symmetric?'.format(test_1))
+print(is_symmetric(test_1))
