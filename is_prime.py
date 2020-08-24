@@ -5,3 +5,12 @@ def is_prime(num) :
         return False
     i += 1
     return True
+
+num_1 = 59
+num_2 = 51
+
+print('Test: Is {} prime?'.format(num_1))
+print(is_prime(num_1))
+
+print('Test: Is {} prime?'.format(num_2))
+print(is_prime(num_2))

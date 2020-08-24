@@ -1,1 +1,2 @@
-echo Hello World
+
+python is_prime.py
