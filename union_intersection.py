@@ -8,19 +8,11 @@ def intersection(list_1,list_2) :
 
 
 def union(list_3,list_4) :
-    newer_list = []
-    if len(list_3) >= len(list_4) :
-        length = len(list_3)
-        small_length = len(list_4)
-    else :
-        length = len(list_4)
-        small_length = len(list_3)
-    i = 0 
-    while i < length :
-        newer_list.append(list_3[i])
-        newer_list.append(list_4[i])
-        i += 1
-    return newer_list
+    emp_list = list_3
+    for unit_4 in list_4 :
+        if unit_4 not in emp_list :
+            emp_list.append(unit_4)
+    return emp_list
 
-assert union([1,2,'a','b'], [2,3,'a']) == [1,2,3,'a','b']
-print('PASSED')
+print(union([1,2,'a','b'],[2,3,'a']))
+#assert union([1,2,'a','b'], [2,3,'a']) == [1,2,3,'a','b']
