@@ -1,3 +1,3 @@
-python union_intersection.py
-python count_characters.py
-python recursive_sequence.py
+python convert_to_base_10.py
+#python make_nested.py
+#python stack.py

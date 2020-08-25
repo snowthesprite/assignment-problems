@@ -9,4 +9,10 @@ def count_characters(string) :
         new_dict[char] = amount
     return new_dict
 
-print(count_characters('A cat!!!'))
+test_str = 'A cat!!!'
+
+print('is {} the right amount of each character for "{}"?'.format(count_characters(test_str),test_str))
+assert count_characters(test_str) == {'a': 2, 'c': 1, 't': 1, ' ': 1, '!': 3}, 'No it is not the right amount of each character'
+print('Yes')
+
+print('')
