@@ -4,7 +4,6 @@ def make_nested(dictionary):
         classifiers = x.split('_')
         if nest_dictionary.get(classifiers[0]) == None:
             nest_dictionary[classifiers[0]] = {}
-        print(nest_dictionary)
         nest_dictionary[classifiers[0]].update({classifiers[1] : dictionary[x]})
 
     return nest_dictionary
