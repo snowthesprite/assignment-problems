@@ -2,7 +2,8 @@ def make_nested(dictionary):
     new_dictionary = {}
     for x in dictionary:
         classifiers = x.split('_')
-        new_dictionary[classifiers[0]] = {classifiers[1] : dictionary[x]}
+        print(new_dictionary)
+        new_dictionary.update({classifiers[0] : {classifiers[1] : dictionary[x]}})
 
     return new_dictionary
 
