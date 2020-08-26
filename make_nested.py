@@ -16,4 +16,21 @@ colors = {
   'food_cheese': ['white', 'orange']
   }
 
-print(make_nested(colors))
+#I'm not going to make it say the answer because the answer takes 3 lines and I don't wanna deal with that
+
+print('Does the make_nested function properly nest the colors dictionary?')
+
+assert make_nested(colors) == {
+  'animal': {
+    'bumblebee': ['yellow', 'black'],
+    'elephant': ['gray'],
+    'fox': ['orange', 'white']
+  },
+  'food': {
+    'apple': ['red', 'green', 'yellow'],
+    'cheese': ['white', 'orange']
+  }
+}, 'No it does not properly nest'
+
+print('Yes it properly nests the colors dictionary')
+print('')
