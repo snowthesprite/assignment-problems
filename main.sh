@@ -1,3 +1,3 @@
-python convert_to_base_10.py
-python make_nested.py
-python stack.py
+python flatten.py
+#python convert_to_base_2.py
+#python linear_encoding_cryptography.py
