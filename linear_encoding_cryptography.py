@@ -12,15 +12,12 @@ def encode(string, a, b) :
 
 def decode(numbers, a, b) :
     simplified = []
-    i = 0
-    while i < len(numbers) :
-        simplified.append((numbers[i] - b) / a)
-        i += 1
-    print(simplified)
     part_trans = []
-    for num in simplified :
-        part_trans.append(alphabet[num])
-    translation = ''.join(emp_list)
+    for num in numbers :
+        simplified.append(int((num - b) / a))
+    for intiger in simplified :
+        part_trans.append(alphabet[intiger])
+    translation = ''.join(part_trans)
     return translation
 
 
