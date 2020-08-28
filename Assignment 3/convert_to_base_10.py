@@ -11,7 +11,7 @@ test = 10011
 
 print('Is {} the correct translation of {} from binary to base-10?'.format(convert_to_base_10(test),test))
 
-#assert convert_to_base_10(test) == 19, "No it is not the right translation"
+assert convert_to_base_10(test) == 19, "No it is not the right translation"
 
 print("Yes it is the right translation")
 print('')

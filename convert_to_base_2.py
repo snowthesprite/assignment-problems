@@ -1,13 +1,14 @@
 import math
 
 def convert_to_base_2(num):
+    number = num
     translation = 0
-    num_len = math.ceil(math.log(num,2))
-    i = num_len - 1
-    while i > 0 :
-        if translation == 0: 
-            translation += 10 ** i
-        return math.log(num - (2 ** i),2)
+    while number > 0 :
+        print(number)
+        power = math.floor(math.log(number,2))
+        translation += 10 ** power
+        number -= 2 ** power
+    return translation
 
 
 
