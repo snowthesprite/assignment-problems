@@ -20,4 +20,17 @@ def decode(numbers, a, b) :
     translation = ''.join(part_trans)
     return translation
 
-print(decode([1, 3, 9, 5, 43], 2, 3))
+def fancy_decode(num_list) :
+    all_translations = []
+    a = 1
+    b = 0
+    while a <= 100 :
+        while b <= 100 :
+            all_translations.append(decode(num_list,a,b))
+            b += 1
+        a += 1
+    return all_translations
+        
+
+
+print(decode([1, 3, 9, 5, 43], 1, 3))
