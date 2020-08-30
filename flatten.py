@@ -19,4 +19,14 @@ colors = {
   }
 }
 
-print(flatten(colors))
+print('Does the flatten() function properly flatten the colors dictionary?')
+assert flatten(colors) == {
+  'animal_bumblebee': ['yellow', 'black'],
+  'animal_elephant': ['gray'],
+  'animal_fox': ['orange', 'white'],
+  'food_apple': ['red', 'green', 'yellow'],
+  'food_cheese': ['white', 'orange']
+}, 'No, flatten() did not properly flatten colors'
+print('Yes, flatten did properlt flatten colors')
+
+print('')

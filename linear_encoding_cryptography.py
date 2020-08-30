@@ -11,14 +11,13 @@ def encode(string, a, b) :
 
 
 def decode(numbers, a, b) :
-    simplified = []
     part_trans = []
     for num in numbers :
-        simplified.append(int((num - b) / a))
-    for intiger in simplified :
-        part_trans.append(alphabet[intiger])
+        simplified = (num - b) / a
+        if (num - b) % a != 0 or simplified < 0 or simplified > 26 :
+            return False
+        part_trans.append(alphabet[int(simplified)])
     translation = ''.join(part_trans)
     return translation
 
-
-print(decode([5, 3, 9, 5, 43], 2, 3))
+print(decode([1, 3, 9, 5, 43], 2, 3))
