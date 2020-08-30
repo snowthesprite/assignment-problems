@@ -14,6 +14,7 @@ def decode(numbers, a, b) :
     part_trans = []
     for num in numbers :
         simplified = (num - b) / a
+        print(simplified)
         if (num - b) % a != 0 or simplified < 0 or simplified > 26 :
             return False
         part_trans.append(alphabet[int(simplified)])
@@ -22,15 +23,17 @@ def decode(numbers, a, b) :
 
 def fancy_decode(num_list) :
     all_translations = []
-    a = 1
-    b = 0
-    while a <= 100 :
-        while b <= 100 :
-            all_translations.append(decode(num_list,a,b))
-            b += 1
-        a += 1
+    c = 1
+    d = 0
+    while c <= 5 :
+        while d <= 5 :
+            if decode(num_list, c , d) != False :
+                all_translations.append(decode(num_list, c , d))
+            d += 1
+        c += 1
     return all_translations
         
 
 
-print(decode([1, 3, 9, 5, 43], 1, 3))
+#print(fancy_decode([377,717,71,513,105,921,581,547,547,105,377,717,241,71,105,547,71,377,547,717,751,683,785,513,241,547,751],))
+print(fancy_decode([5, 3, 9, 5, 43]))
