@@ -1,18 +1,18 @@
 def intersection(list_1,list_2) :
-    new_list = []
+    intersect_list = []
     for unit_1 in list_1 :
         for unit_2 in list_2 :
             if unit_1 == unit_2 :
-                new_list.append(unit_1)
-    return new_list
+                intersect_list.append(unit_1)
+    return intersect_list
 
 
 def union(list_3,list_4) :
-    emp_list = list_3
+    union_list = list_3
     for unit_4 in list_4 :
-        if unit_4 not in emp_list :
-            emp_list.append(unit_4)
-    return emp_list
+        if unit_4 not in union_list :
+            union_list.append(unit_4)
+    return union_list
 
 test_list_1 = [1,2,'a','b']
 test_list_2 = [2,3,'a']

@@ -1,13 +1,13 @@
 def count_characters(string) :
-    ed_string = string.casefold()
-    new_dict = {}
-    for char in ed_string :
+    lowercase_string = string.casefold()
+    count_dict = {}
+    for char in lowercase_string :
         amount = 0
-        for character in ed_string :
+        for character in lowercase_string :
             if char == character :
                 amount += 1
-        new_dict[char] = amount
-    return new_dict
+        count_dict[char] = amount
+    return count_dict
 
 test_str = 'A cat!!!'
 
