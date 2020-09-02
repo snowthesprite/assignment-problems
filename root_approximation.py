@@ -11,4 +11,3 @@ def estimate_root(precision, bound) :
     return estimate_root(precision, update_bounds(bound))
 
 
-print(estimate_root(0.1, [1,2]))
