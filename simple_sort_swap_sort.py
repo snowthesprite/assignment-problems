@@ -20,7 +20,8 @@ def simple_sort(num_list) :
     return sorted_elements
 
 def swap_sort(x) : 
-    length = len(X)
+    length = len(x)
+    print(len(x))
     i = 0
     sorted_elements = []
     ran = False
@@ -36,9 +37,10 @@ def swap_sort(x) :
             sorted_elements.append(element_0)
         i += 1
     if ran :
-        return swap_sort(sorted_elements)
+        return swap_sort(x)
+    sorted_elements.append(x[-1])
     return sorted_elements
 
 
 
-print(simple_sort([5,8,2,2,4,3,0,2,-5,3.14,2]))
+print(swap_sort([5,8,2,2,4,3,0,2,-5,3.14,2]))
