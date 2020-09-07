@@ -11,6 +11,9 @@ def convert_to_base_2(num):
 
 test = 19
 
+print('convert_to_base_2 testing:')
+print('')
+
 print('Is {} the correct conversion to base 2 from {}?'.format(convert_to_base_2(test),test))
 assert convert_to_base_2(test) == 10011, 'No it does not correctly convert'
 print('Yes, {} is the correct conversion from {}'.format(convert_to_base_2(test),test))

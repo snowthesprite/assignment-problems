@@ -1,7 +1,2 @@
-#python comprehensions.py
-#python root_approximation.py
-#python queue.py
-
-python union_intersection.py
-python count_characters.py
-python recursive_sequence.py
+python skip_factorial.py
+python simple_sort_swap_sort.py

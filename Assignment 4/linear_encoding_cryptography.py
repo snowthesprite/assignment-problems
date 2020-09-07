@@ -20,7 +20,7 @@ def decode(numbers, a, b) :
     translation = ''.join(part_trans)
     return translation
 
-def fancy_decode(num_list) :
+def general_message_decode(num_list) :
     all_translations = []
     c = 1
     while c <= 100 :
@@ -32,8 +32,15 @@ def fancy_decode(num_list) :
         c += 1
     return all_translations
         
-fancy_translation = fancy_decode([377,717,71,513,105,921,581,547,547,105,377,717,241,71,105,547,71,377,547,717,751,683,785,513,241,547,751])
+general_message_translation = general_message_decode([377,717,71,513,105,921,581,547,547,105,377,717,241,71,105,547,71,377,547,717,751,683,785,513,241,547,751])
 
+print('Encode test:')
+print('Is {} the correct translation of {}'.format(encode('a cat', 2, 3), 'a cat'))
+assert encode('a cat', 2, 3) == [5, 3, 9, 5, 43], 'No, it is not the right translation'
+print('Yes, it is the correct translation')
+print('')
+
+print('Decode test:')
 print('Is {} the correct translation of {}'.format(decode([5, 3, 9, 5, 43], 2, 3), [5, 3, 9, 5, 43]))
 assert decode([5, 3, 9, 5, 43], 2, 3) == 'a cat', 'No, it is not the right translation'
 print('Yes, it is the correct translation')
@@ -50,4 +57,4 @@ print('Yes it is the correct answer')
 print('')
 
 
-print(fancy_translation[1])
+print(general_message_translation[1])
