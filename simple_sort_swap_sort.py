@@ -9,10 +9,8 @@ def minimum(list_numbers) :
 def simple_sort(num_list) : 
     sorted_elements = []
     length = len(num_list)
-    print(length)
     i = 0
     while i < length :
-        print('run')
         mini = minimum(num_list)
         sorted_elements.append(mini)
         num_list.remove(mini)
@@ -21,7 +19,6 @@ def simple_sort(num_list) :
 
 def swap_sort(x) : 
     length = len(x)
-    print(len(x))
     i = 0
     sorted_elements = []
     ran = False
@@ -39,8 +36,13 @@ def swap_sort(x) :
     if ran :
         return swap_sort(x)
     sorted_elements.append(x[-1])
-    return sorted_elements
+    return x
 
+print('Does simple sort properly sort the list of numbers?')
+assert simple_sort([5,8,2,2,4,3,0,2,-5,3.14,2]) == [-5,0,2,2,2,2,3,3.14,4,5,8], 'No it doesnt sort the elements'
+print('Yes it does sort the elements')
+print('')
 
-
-print(swap_sort([5,8,2,2,4,3,0,2,-5,3.14,2]))
+print('Does swap sort properly sort the list of numbers?')
+assert swap_sort([5,8,2,2,4,3,0,2,-5,3.14,2]) == [-5,0,2,2,2,2,3,3.14,4,5,8], 'No it doesnt sort the elements'
+print('Yes it does sort the elements')
