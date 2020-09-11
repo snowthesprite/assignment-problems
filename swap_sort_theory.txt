@@ -1,0 +1,7 @@
+A) With either a list of 5 of of n elements, the lowest number of swaps would be 0, for if the list is in order.
+
+B) With a list of 5 elements, the greatest number of swaps would be 15 (5 + 4 + 3 + 2 + 1) for if everything got swaped at least once.
+
+C) True. A decreasing sequence means the next number must be less than or equal too the previous number. There can never be a greater number of swaps than the first set.
+
+D) False. An example would be last assginment 6-3.b, where the first and second pass have the same number of swaps.

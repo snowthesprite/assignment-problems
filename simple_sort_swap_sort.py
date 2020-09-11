@@ -20,22 +20,17 @@ def simple_sort(num_list) :
 def swap_sort(x) : 
     length = len(x)
     i = 0
-    sorted_elements = []
     ran = False
     while i < length - 1 : 
         element_0 = x[i]
         element_1 = x[i + 1]
         if element_0 > element_1 :
-            sorted_elements.append(element_1)
             x[i] = element_1
             x[i + 1] = element_0
             ran = True
-        elif element_0 <= element_1 :
-            sorted_elements.append(element_0)
         i += 1
     if ran :
         return swap_sort(x)
-    sorted_elements.append(x[-1])
     return x
 
 print('Does simple sort properly sort the list of numbers?')
