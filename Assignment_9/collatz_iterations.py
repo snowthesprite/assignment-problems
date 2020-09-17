@@ -21,10 +21,12 @@ def highest_collatz(max) :
             max_collatz = num
     return collatz_holder.index(max_collatz)
 
-print('Is {} the correnct number ')
-assert collatz_iterations(13) == 9
+print('Is {} the correnct amount of Collatz iterations for 13?'.format(collatz_iterations(13)))
+assert collatz_iterations(13) == 9, 'No its not'
+print('Yes it is!')
+print('')
 
-print(highest_collatz(1000))
+print('{} is the number between 1 and 1000 that has the highest number of Collatz iterations'.format(highest_collatz(1000)))
 
 #The chart is just showing up black and I have no idea what is going on it 
 plt.style.use('bmh')

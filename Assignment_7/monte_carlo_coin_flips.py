@@ -1,8 +1,8 @@
 from random import random
 
 def find_factorial(n) :
-    if n == 1 : 
-        return n
+    if n == 1 or n == 0 : 
+        return 1
     return n * find_factorial(n - 1)
 
 def probability(num_heads, num_flips) :
@@ -33,15 +33,3 @@ def monte_carlo_probability(num_heads, num_flips) :
         if amount_of_heads == num_heads :
             succeeded_tests += 1
     return succeeded_tests/1000
-
-print('Is {} the correct probability of 5 heads in 8 coin flips?'.format(probability(5,8)))
-assert probability(5,8) == 0.21875, 'No, it is not the right outcome'
-print('Yes, it is the right probability')
-print('')
-
-print('Test 1 Monte Carlo Probability: {}'.format(monte_carlo_probability(5,8)))
-print('Test 2 Monte Carlo Probability: {}'.format(monte_carlo_probability(5,8)))
-print('Test 3 Monte Carlo Probability: {}'.format(monte_carlo_probability(5,8)))
-print('Test 4 Monte Carlo Probability: {}'.format(monte_carlo_probability(5,8)))
-print('Test 5 Monte Carlo Probability: {}'.format(monte_carlo_probability(5,8)))
-
