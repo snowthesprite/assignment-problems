@@ -18,17 +18,14 @@ def simple_sort(num_list) :
     return sorted_elements
 
 def swap_sort(x) : 
-    length = len(x)
-    i = 0
     ran = False
-    while i < length - 1 : 
+    for i in range(len(x) - 1) : 
         element_0 = x[i]
         element_1 = x[i + 1]
         if element_0 > element_1 :
             x[i] = element_1
             x[i + 1] = element_0
             ran = True
-        i += 1
     if ran :
         return swap_sort(x)
     return x

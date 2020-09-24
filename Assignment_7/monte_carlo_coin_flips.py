@@ -13,10 +13,10 @@ def probability(num_heads, num_flips) :
     return head_outcomes/total_outcomes
 
 
-def monte_carlo_probability(num_heads, num_flips) :
+def monte_carlo_probability(num_heads, num_flips, test_amount) :
     all_tests = []
     succeeded_tests = 0
-    for test in range(1000) :
+    for test in range(test_amount) :
         is_heads = []
         for heads in range(num_flips):
             heads_tails = random()
@@ -32,4 +32,4 @@ def monte_carlo_probability(num_heads, num_flips) :
                 amount_of_heads += 1
         if amount_of_heads == num_heads :
             succeeded_tests += 1
-    return succeeded_tests/1000
+    return succeeded_tests/test_amount
