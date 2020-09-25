@@ -16,7 +16,7 @@ class Rectangle :
         print('Color: {}'.format(self.color))
         print('Perimeter: {}'.format(self.perimeter))
         print('Area: {}'.format(self.area))
-        print('vertices: {}'.format(self.vertices))
+        print('Vertices: {}'.format(self.vertices))
 
     def render(self) : 
         plt.style.use('bmh')
@@ -26,7 +26,7 @@ class Rectangle :
         y_points.append(0)
         plt.gca().set_aspect("equal")
         plt.plot(x_points,y_points, self.color)
-        plt.savefig('squareplot.png')
+        plt.savefig('Assignment_12/squareplot.png')
         plt.clf()
 
 class RightTriangle :
@@ -44,7 +44,7 @@ class RightTriangle :
         print('Color: {}'.format(self.color))
         print('Perimeter: {}'.format(self.perimeter))
         print('Area: {}'.format(self.area))
-        print('vertices: {}'.format(self.vertices))
+        print('Vertices: {}'.format(self.vertices))
 
     def render(self) : 
         plt.style.use('bmh')
@@ -54,5 +54,5 @@ class RightTriangle :
         y_points.append(0)
         plt.gca().set_aspect("equal")
         plt.plot(x_points,y_points, self.color)
-        plt.savefig('triangleplot.png')
+        plt.savefig('Assignment_12/triangleplot.png')
         plt.clf()
