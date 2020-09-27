@@ -26,7 +26,7 @@ class Rectangle :
         y_points.append(0)
         plt.gca().set_aspect("equal")
         plt.plot(x_points,y_points, self.color)
-        plt.savefig('Assignment_12/squareplot.png')
+        plt.savefig('Assignment_13/squareplot.png')
         plt.clf()
 
 class RightTriangle :
@@ -56,3 +56,8 @@ class RightTriangle :
         plt.plot(x_points,y_points, self.color)
         plt.savefig('Assignment_12/triangleplot.png')
         plt.clf()
+
+
+class Square(Rectangle):
+    def __init__(self, sides, color) :
+        super().__init__(sides, sides, color)
