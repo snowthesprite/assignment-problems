@@ -9,3 +9,5 @@ sq = Square(5,'green')
 sq.describe()
 sq.render()
 '''
+from detecting_biased_coins import *
+

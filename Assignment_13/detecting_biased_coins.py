@@ -1,3 +1,15 @@
+def finding_probability(tests) :
+    for heads in range(4) :
+        for test in tests :
+        amount_of_heads = 0
+        for outcome in test :
+            if outcome :
+                amount_of_heads += 1
+        if amount_of_heads == num_heads :
+            succeeded_tests += 1
+    return succeeded_tests/test_amount
+
+
 coin_1 = ['TTH', 'HHT', 'HTH', 'TTH', 'HTH',
           'TTH', 'TTH', 'TTH', 'THT', 'TTH',
           'HTH', 'HTH', 'TTT', 'HTH', 'HTH',
