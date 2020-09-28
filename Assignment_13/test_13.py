@@ -8,11 +8,10 @@ from monte_carlo_coin_flips import *
 
 
 print()
-'''
 sq = Square(5,'green')
 sq.describe()
-#sq.render()
-'''
+sq.render()
+print()
 
 coin_1 = ['TTH', 'HHT', 'HTH', 'TTH', 'HTH',
           'TTH', 'TTH', 'TTH', 'THT', 'TTH',
@@ -29,10 +28,6 @@ coin_3 = ['HHH', 'THT', 'HHT', 'HHT', 'HTH',
           'HHH', 'HHH', 'TTH', 'THH', 'THH',
           'TTH', 'HTT', 'TTH', 'HTT', 'HHT',
           'TTH', 'HTH', 'THT', 'THT', 'HTH']
-
-print(finding_probability(coin_1))
-print(finding_probability(coin_2))
-print(finding_probability(coin_3))
 
 plt.style.use('bmh')
 plt.plot([heads for heads in range(4)], [probability(heads,3) for heads in range(4)])
