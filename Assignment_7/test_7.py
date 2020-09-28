@@ -1,3 +1,5 @@
+from monte_carlo_coin_flips import *
+'''
 print('Is {} the correct probability of 5 heads in 8 coin flips?'.format(probability(5,8)))
 assert probability(5,8) == 0.21875, 'No, it is not the right outcome'
 print('Yes, it is the right probability')
@@ -8,3 +10,8 @@ print('Test 2 Monte Carlo Probability: {}'.format(monte_carlo_probability(5,8)))
 print('Test 3 Monte Carlo Probability: {}'.format(monte_carlo_probability(5,8)))
 print('Test 4 Monte Carlo Probability: {}'.format(monte_carlo_probability(5,8)))
 print('Test 5 Monte Carlo Probability: {}'.format(monte_carlo_probability(5,8)))
+'''
+print(probability(0,3))
+print(probability(1,3))
+print(probability(2,3))
+print(probability(3,3))
