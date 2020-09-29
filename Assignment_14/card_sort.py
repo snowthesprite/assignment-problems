@@ -4,8 +4,8 @@ def card_sort(num_list) :
         #print('ran')
         i = 0
         run = False
-        while i < (len(sorted_num_list) - 1) :
-            if num > sorted_num_list[i] and num < sorted_num_list[i + 1] :
+        while i < len(sorted_num_list) :
+            if num > sorted_num_list[i] :
                 sorted_num_list.insert(i + 1, num)
                 run = True
             i += 1
