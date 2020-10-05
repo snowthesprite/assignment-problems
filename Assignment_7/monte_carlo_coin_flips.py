@@ -26,6 +26,7 @@ def monte_carlo_probability(num_heads, num_flips, test_amount) :
                 is_heads.append(False)
         all_tests.append(is_heads)
     for test in all_tests :
+        print(t)
         amount_of_heads = 0
         for outcome in test :
             if outcome :

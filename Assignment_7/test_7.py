@@ -11,7 +11,4 @@ print('Test 3 Monte Carlo Probability: {}'.format(monte_carlo_probability(5,8)))
 print('Test 4 Monte Carlo Probability: {}'.format(monte_carlo_probability(5,8)))
 print('Test 5 Monte Carlo Probability: {}'.format(monte_carlo_probability(5,8)))
 '''
-print(probability(0,3))
-print(probability(1,3))
-print(probability(2,3))
-print(probability(3,3))
+test0 = monte_carlo_probability(0, 4 , 4)
