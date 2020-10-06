@@ -10,3 +10,10 @@ def count_compression(string) :
         count += 1
     count_list.append((repeat, count))
     return count_list
+
+def count_decompression(compressed_string) :
+    listed_string = []
+    for count in compressed_string :
+        for _ in range(count[1]) :
+            listed_string.append(count[0])
+    return ''.join(listed_string)
