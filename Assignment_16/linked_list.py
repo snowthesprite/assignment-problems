@@ -21,11 +21,8 @@ class LinkedList :
             test_subject = test_subject.next
         return count
 
-
     def append(self, next_data) :
         test_subject = self.head
-        while test_subject != None :
-            print(test_subject)
+        while test_subject.next != None :
             test_subject = test_subject.next
-        test_subject = Node(next_data)
-        self.head.next = Node(next_data)
+        test_subject.next = Node(next_data)
