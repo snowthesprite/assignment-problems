@@ -14,28 +14,38 @@ flips = {
     'William': 'THTT HHHT HTTH THHT THTH HHHT TTTH HHTH THTH HTHT HHHT TTHT HHHT THTT HHTT TTHH HHTH TTTT THTH TTHT'
 }
 
-print(most_accurate(flips))
+print('The list of who guessed the best goes, from best to worst : {}'.format(most_accurate(flips)))
+print()
+print('{} had the best guess of randomness.'.format(most_accurate(flips)[0]))
+print()
 
 linked_list = LinkedList('b')
 linked_list.append('e')
 linked_list.append('f')
 linked_list.push('a')
-assert linked_list.length() == 4
 
-assert linked_list.head.index == 0
+print('Is the linked list the correct length?')
+assert linked_list.length() == 4, 'No it is not'
+print('Yes it is')
+print()
 
-assert linked_list.head.next.index == 1
+print('Are the indexies correct for the nodes?')
+assert linked_list.head.index == 0, 'Index 0 is not correct'
 
-assert linked_list.head.next.next.index == 2
+assert linked_list.head.next.index == 1, 'Index 1 is not correct'
 
-assert linked_list.head.next.next.next.index == 3
+assert linked_list.head.next.next.index == 2, 'Index 2 is not correct'
 
-assert linked_list.get_node(0).data == 'a'
+assert linked_list.head.next.next.next.index == 3, 'Index 3 is not correct'
+print('Yes they are')
+print()
 
-assert linked_list.get_node(1).data == 'b'
+print('Is get_node working correctly?')
+assert linked_list.get_node(0).data == 'a', 'Not for node 0'
 
-assert linked_list.get_node(2).data == 'e'
+assert linked_list.get_node(1).data == 'b', 'Not for node 1'
 
-assert linked_list.get_node(3).data == 'f'
+assert linked_list.get_node(2).data == 'e', 'Not for node 2'
 
-
+assert linked_list.get_node(3).data == 'f', 'Not for node 3'
+print('Yes it is!')
