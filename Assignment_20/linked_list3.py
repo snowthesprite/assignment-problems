@@ -56,4 +56,15 @@ class LinkedList :
         node = self.head
         while node.next.index != index :
             node = node.next
-        return node.next
+        second_section = node.next.next
+        node.next = second_section
+        self.set_index()
+
+    def insert(self, new_data, index) :
+        data = Node(new_data)
+        node = self.head
+        while node.next.index != index :
+            node = node.next
+        data.next = node.next
+        node.next = data
+        self.set_index()
