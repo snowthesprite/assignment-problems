@@ -8,4 +8,4 @@ def gradient_descent(f,x0,alpha=0.01,delta=0.0001,iterations=10000) :
         f_prime = estimate_derivative(f, point, delta)
         point = point - alpha * f_prime
         base_iterations += 1
-    return point
+    return point 
