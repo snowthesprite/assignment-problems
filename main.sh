@@ -1,3 +1,3 @@
-python Assignment_20/test_20.py
+python Assignment_22/test_22.py
 
 #python Quiz.py
