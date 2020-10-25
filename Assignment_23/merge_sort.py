@@ -4,20 +4,27 @@ def merge(x,y) :
     ran = False
     x_index = 0
     y_index = 0
-    #print(x_index, y_index)
-    #print(len(x), len(y))
     merged_list = []
     while True :
-        if x_index >= len(x) and y_index >= len(y) :
-            return merged_list
-        x_element = x[x_index]
-        y_element = y[y_index]
-        if x_element <= y_element :
-            merged_list.append(x_element)
-            x_index += 1
-        elif y_element < x_element :
-            merged_list.append(y_element)
+        if x_index >= len(x) and y_index < len(y) :
+            merged_list.append(y[y_index])
             y_index += 1
+            ran = True
+        elif y_index >= len(y) and x_index < len(x) :
+            merged_list.append(x[x_index])
+            x_index += 1
+            ran = True
+        elif x_index >= len(x) and y_index >= len(y) :
+            return merged_list
+        if not ran : 
+            x_element = x[x_index]
+            y_element = y[y_index]
+            if x_element <= y_element :
+                merged_list.append(x_element)
+                x_index += 1
+            elif y_element < x_element :
+                merged_list.append(y_element)
+                y_index += 1
 
 def merge_sort(given_list) :
     global a_repet
@@ -33,15 +40,27 @@ def merge_sort(given_list) :
                 b.append(given_list[element])
         print(a_repet, b_repet)
         print(a, b)
-    #'''
+
+    if len(a) > 1 and len(b) > 1 :
+        a_repet += 1
+        return merge_sort(a)
+        b_repet += 1
+        return merge_sort(b)
+    
+    '''
     if len(a) > 1 :
-        a_list = [merge_sort(a)]
-    print('ran')
-    #'''
-    if len(a) == 1 :
-        sorted_list = merge(a, b)
-        #print(sorted_list)
+        return merge_sort(a)
+    print('ran1')
+    sorted_list_a = merge(a,b)
+    print(sorted_list_a)
         
+    
+    if len(b) > 1 :
+        return merge_sort(b)
+    print('ran2')
+    sorted_list_b = merge(a,b)
+    print(sorted_list_b)
+    #'''
     '''
     if len(a) > 1 and len(b) > 1 :
         a_repet += 1
