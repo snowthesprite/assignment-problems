@@ -41,22 +41,15 @@ def merge_sort(given_list) :
         print(a_repet, b_repet)
         print(a, b)
 
-    if len(a) > 1 and len(b) > 1 :
-        a_repet += 1
-        return merge_sort(a)
-        b_repet += 1
-        return merge_sort(b)
-    
-    '''
     if len(a) > 1 :
-        return merge_sort(a)
+        coward1 = merge_sort(a)
     print('ran1')
     sorted_list_a = merge(a,b)
     print(sorted_list_a)
         
     
     if len(b) > 1 :
-        return merge_sort(b)
+        coward2 = merge_sort(b)
     print('ran2')
     sorted_list_b = merge(a,b)
     print(sorted_list_b)
