@@ -29,6 +29,8 @@ def merge(x,y) :
 def merge_sort(given_list) :
     global a_repet
     global b_repet
+    a_ran = False
+    b_ran = False
     length = len(given_list)
     a = []
     b = []
@@ -40,19 +42,31 @@ def merge_sort(given_list) :
                 b.append(given_list[element])
         print(a_repet, b_repet)
         print(a, b)
-
+        print('len', len(a), len(b))
+    if len(a) > 1 and len(b) > 1 :
+        a_repet += 1
+        a_list = [merge_sort(a)]
+        print('ran')
+        print(1, a, b)
+        #sorted_list_a = merge(a,b)
+        #print('a', sorted_list_a)
+        b_repet += 1
+        b_list = [merge_sort(b)]
+        #print(a_list, b_list)
+    '''
     if len(a) > 1 :
         coward1 = merge_sort(a)
-    print('ran1')
-    sorted_list_a = merge(a,b)
-    print(sorted_list_a)
-        
-    
+        a_ran = True
+    if a_ran :
+        print('ran1')
+        sorted_list_a = merge(a,b)
+        print(sorted_list_a)
     if len(b) > 1 :
         coward2 = merge_sort(b)
-    print('ran2')
-    sorted_list_b = merge(a,b)
-    print(sorted_list_b)
+    if b_ran :
+        print('ran2')
+        sorted_list_b = merge(a,b)
+        print(sorted_list_b)
     #'''
     '''
     if len(a) > 1 and len(b) > 1 :
