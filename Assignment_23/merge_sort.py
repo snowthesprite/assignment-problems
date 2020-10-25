@@ -41,9 +41,10 @@ def merge_sort(given_list) :
                 b.append(given_list[element])
         print(a_repet, b_repet)
         print(a, b)
-    '''
+    #'''
     if len(a) > 1 :
-        return merge_sort(a)
+        a_list = [merge_sort(a)]
+    '''
     elif len(a) == 1 :
         sorted_list = merge(a, b)
         print(sorted_list)
