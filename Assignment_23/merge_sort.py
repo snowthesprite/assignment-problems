@@ -1,5 +1,11 @@
-a_repet = 0
-b_repet = 0
+run_through_1 = False
+run_through_2 = False
+final_check = False
+sorted_list_1 = []
+sorted_list_2 = []
+half_done = []
+
+
 def merge(x,y) : 
     ran = False
     x_index = 0
@@ -27,10 +33,13 @@ def merge(x,y) :
                 y_index += 1
 
 def merge_sort(given_list) :
-    global a_repet
-    global b_repet
-    a_ran = False
-    b_ran = False
+    global run_through_1
+    global run_through_2
+    global final_check
+    global sorted_list_1
+    global sorted_list_2
+    global half_done
+
     length = len(given_list)
     a = []
     b = []
@@ -40,39 +49,28 @@ def merge_sort(given_list) :
                 a.append(given_list[element])
             elif element >= length / 2 :
                 b.append(given_list[element])
-        print(a_repet, b_repet)
-        print(a, b)
-        print('len', len(a), len(b))
+        print('ending values', a, b)
+    if len(a) == 1 and len(b) == 1:
+        if not run_through_1 and not run_through_2 :
+            sorted_list_1 = merge(a,b)
+            print(1, sorted_list_1)
+            run_through_1 = True
+        elif run_through_1 and not run_through_2 :
+            sorted_list_2 = merge(a,b)
+            print(2, sorted_list_2)
+            run_through_2 = True
+        if run_through_1 and run_through_2 and not final_check :
+            half_done = merge(sorted_list_1, sorted_list_2)
+            print('hd', half_done)
+            run_through_1 = False
+            run_through_2 = False
+            final_check = True
+        elif run_through_1 and run_through_2 and final_check :
+            half_done_2 = merge(sorted_list_1,sorted_list_2)
+            print('hd2', half_done_2)
+            finished_list = merge(half_done, half_done_2)
+            print(finished_list)
+            return 'ran'
     if len(a) > 1 and len(b) > 1 :
-        a_repet += 1
-        a_list = [merge_sort(a)]
-        print('ran')
-        print(1, a, b)
-        #sorted_list_a = merge(a,b)
-        #print('a', sorted_list_a)
-        b_repet += 1
-        b_list = [merge_sort(b)]
-        #print(a_list, b_list)
-    '''
-    if len(a) > 1 :
-        coward1 = merge_sort(a)
-        a_ran = True
-    if a_ran :
-        print('ran1')
-        sorted_list_a = merge(a,b)
-        print(sorted_list_a)
-    if len(b) > 1 :
-        coward2 = merge_sort(b)
-    if b_ran :
-        print('ran2')
-        sorted_list_b = merge(a,b)
-        print(sorted_list_b)
-    #'''
-    '''
-    if len(a) > 1 and len(b) > 1 :
-        a_repet += 1
-        a_list = [merge_sort(a)]
-        b_repet += 1
-        b_list = [merge_sort(b)]
-        #print(a_list, b_list)
-    #'''
+        a = merge_sort(a)
+        b = merge_sort(b)
