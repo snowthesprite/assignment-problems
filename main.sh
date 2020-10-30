@@ -1,5 +1,5 @@
 #for when you can't commit again VVV
 #rm .git/index.lock
-python Assignment_23/test_23.py
+python Assignment_25/test_25.py
 
 #python Quiz.py

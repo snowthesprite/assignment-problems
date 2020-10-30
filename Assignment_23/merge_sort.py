@@ -4,7 +4,7 @@ final_check = False
 sorted_list_1 = []
 sorted_list_2 = []
 half_done = []
-
+half_done_2 = []
 
 def merge(x,y) : 
     ran = False
@@ -39,7 +39,11 @@ def merge_sort(given_list) :
     global sorted_list_1
     global sorted_list_2
     global half_done
-
+    global half_done_2
+    #yes I used globals sue me
+    #actually dont
+    #I like my grade
+    #This is why I don't code off my meds
     length = len(given_list)
     a = []
     b = []
@@ -49,28 +53,28 @@ def merge_sort(given_list) :
                 a.append(given_list[element])
             elif element >= length / 2 :
                 b.append(given_list[element])
-        print('ending values', a, b)
     if len(a) == 1 and len(b) == 1:
         if not run_through_1 and not run_through_2 :
             sorted_list_1 = merge(a,b)
-            print(1, sorted_list_1)
             run_through_1 = True
         elif run_through_1 and not run_through_2 :
             sorted_list_2 = merge(a,b)
-            print(2, sorted_list_2)
             run_through_2 = True
         if run_through_1 and run_through_2 and not final_check :
             half_done = merge(sorted_list_1, sorted_list_2)
-            print('hd', half_done)
             run_through_1 = False
             run_through_2 = False
             final_check = True
         elif run_through_1 and run_through_2 and final_check :
             half_done_2 = merge(sorted_list_1,sorted_list_2)
-            print('hd2', half_done_2)
-            finished_list = merge(half_done, half_done_2)
-            print(finished_list)
-            return 'ran'
+            run_through_1 = False
+            run_through_2 = False
+            final_check = False
     if len(a) > 1 and len(b) > 1 :
         a = merge_sort(a)
         b = merge_sort(b)
+
+    #Only works here? ¯\_(ツ)_/¯ 
+    if not run_through_1 and not run_through_2 and not final_check :
+        finished_list = merge(half_done,half_done_2)
+        return finished_list
