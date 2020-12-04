@@ -9,4 +9,4 @@ def certanty(percent, funct, bound) :
     while chance < percent :
         chance +=  funct(bound)
         bound += 1
-    return bound
+    return bound, chance
