@@ -36,11 +36,14 @@ def calc_standard_normal_probability(a,b,n,rule) :
     elif rule == "simpson" :
         prediction += funct(step) 
         step += step_size
+        step_number = 1
         while step < b :
-            if step % 2 == 0 :
+            if step_number % 2 == 0 :
                 coefficent = 2
             else :
                 coefficent = 4
             prediction += funct(step) * coefficent
             step += step_size
+            step_number += 1
+        prediction += funct(step)
         return prediction * (step_size / 3)
