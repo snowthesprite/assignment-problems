@@ -17,7 +17,7 @@ keys = ["left endpoint", "right endpoint", "midpoint", "trapezoidal", "simpson"]
 plt.style.use('bmh')
 x_points = []
 y_points = {key : [] for key in keys}
-for subinterval_number in range(2, 21) :
+for subinterval_number in range(2, 101) :
     x_points.append(subinterval_number)
     for key in keys :
         y_points[key].append(calc_standard_normal_probability(0, 1, subinterval_number, key))
@@ -28,4 +28,7 @@ plt.legend(keys)
 '''
 plt.plot(x_points, y_points[keys[0]])
 plt.plot(x_points, y_points[keys[1]])
+plt.plot(x_points, y_points[keys[2]])
+#plt.plot(x_points, y_points[keys[3]])
+#plt.plot(x_points, y_points[keys[4]])
 plt.savefig('Assignment_45/eulerplot.png')
