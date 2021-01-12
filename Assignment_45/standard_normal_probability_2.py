@@ -14,16 +14,18 @@ def calc_standard_normal_probability(a,b,n,rule) :
 
     elif rule == "right endpoint" :
         step += step_size
-        while step <= b :
+        while step_number < n :
             prediction += funct(step) 
             step += step_size
+            step_number += 1
         return prediction * step_size
 
     elif rule == "midpoint" :
-        while step < b :
+        while step_number < n :
             step_2 = step + step_size
             prediction += funct((step + step_2)/2) 
             step += step_size
+            step_number += 1
         return prediction * step_size 
     
     elif rule == "trapezoidal" :
