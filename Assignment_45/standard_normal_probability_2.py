@@ -21,9 +21,8 @@ def calc_standard_normal_probability(a,b,n,rule) :
         return prediction * step_size
 
     elif rule == "midpoint" :
-        step_number += 1
         step_2 = step + step_size
-        while step_number <= n :
+        while step_number < n :
             prediction += funct((step + step_2)/2) 
             step += step_size
             step_2 = step + step_size
@@ -33,10 +32,13 @@ def calc_standard_normal_probability(a,b,n,rule) :
     elif rule == "trapezoidal" :
         prediction += funct(step) * 0.5
         step += step_size
-        while step < b :
+        step_number += 1
+        while step_number < n :
             prediction += funct(step) 
             step += step_size
+            step_number += 1
         prediction += funct(step) * 0.5
+        print(n, prediction * step_size)
         return prediction * step_size
     
     elif rule == "simpson" :
