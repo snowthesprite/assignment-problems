@@ -4,10 +4,12 @@ def calc_standard_normal_probability(a,b,n,rule) :
     step_size = (b - a) / n
     step = a
     prediction = 0
+    step_number = 0
     if rule == "left endpoint" :
-        while step < b :
+        while step_number < n :
             prediction += funct(step)
             step += step_size
+            step_number += 1
         return prediction * step_size
 
     elif rule == "right endpoint" :
@@ -36,7 +38,6 @@ def calc_standard_normal_probability(a,b,n,rule) :
     elif rule == "simpson" :
         prediction += funct(step) 
         step += step_size
-        step_number = 1
         while step < b :
             if step_number % 2 == 0 :
                 coefficent = 2
