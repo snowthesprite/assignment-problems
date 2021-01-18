@@ -1,7 +1,7 @@
 def calculate_coefficient(self):
     finished_coeff = {}
     data_dict_data = list(self.df.data_dict.values())
-    line_eqn = [[1 for _ in data_dict_data[0]]]
+    line_eqn = [[1 for _ in data_dict_data[0][0]]]
     independent_variable = {}
     for key in self.df.data_dict:
         if key != self.dependent_variable:
@@ -16,7 +16,7 @@ def calculate_coefficient(self):
     multiplier = [data_dict_data[1][0]]
     multiplier_x_pseudoinv = line_eqn_pseudoinv.matrix_multiply(Matrix(multiplier)).elements
     finished_coeff['constant'] = multiplier_x_pseudoinv[0][0] #that should be the right idex
-    for num in range(len(multiplier_x_pseudoinv)):
+    for num in range(1, len(multiplier_x_pseudoinv)):
         key = list(self.df.data_dict)[num-1]
         finished_coeff[key] = [row[0] for row in multiplier_x_pseudoinv][num]
     return finished_coeff
