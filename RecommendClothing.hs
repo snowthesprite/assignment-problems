@@ -1,10 +1,9 @@
-bmiTell :: (RealFloat a) => a -> String  
-bmiTell degreesCelsius
-    | bmi <= underweightThreshold = "The patient may be underweight. If this is the case, the patient should be recommended a higher-calorie diet."  
-    | bmi <= normalThreshold = "The patient may be at a normal weight."   
-    | otherwise = "The patient may be overweight. If this is the case, the patient should be recommended exercise and a lower-calorie diet."  
-    where bmi = degreesCelsius * 9 / 2 + 32
-          underweightThreshold = 18.5  
-          normalThreshold = 25.0
+recommendClothing :: (RealFloat a) => a -> String  
+recommendClothing degreesCelsius
+    | degreesFahrenheit >= 80 = "You should wear a shortsleeved shirt today."  
+    | degreesFahrenheit > 65 = "You should wear a longsleeved shirt today."
+    | degreesFahrenheit > 50 = "You should wear a sweater today."   
+    | otherwise = "You should wear a jacket today."
+    where degreesFahrenheit = degreesCelsius * 9 / 5 + 32
 
-main = print (bmiTell 15)
+main = print (recommendClothing 15)
