@@ -2,6 +2,6 @@
 #rm .git/index.lock
 #python Assignment_47/test_47.py
 echo 
-ghc --make Tail
-./Tail
+#ghc --make SquareSingleDigitNumbers
+./SquareSingleDigitNumbers
 #python Quiz.py
