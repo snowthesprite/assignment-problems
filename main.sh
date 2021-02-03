@@ -3,12 +3,12 @@
 #python Assignment_47/test_47.py
 
 
-#ghc --make SquareSingleDigitNumbers
-./SquareSingleDigitNumbers
+#ghc --make Tail
+./Tail
 
 echo 
 
-g++ simulateFall.cpp -o simulateFall
-./simulateFall
+g++ isPrime.cpp -o isPrime
+./isPrime
 
 #python Quiz.py
