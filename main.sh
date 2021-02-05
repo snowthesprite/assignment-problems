@@ -4,11 +4,11 @@
 
 
 #ghc --make Tail
-./Tail
+#./Tail
 
 echo 
 
-g++ isPrime.cpp -o isPrime
-./isPrime
+g++ metaFibonacciSum.cpp -o metaFibonacciSum
+./metaFibonacciSum
 
 #python Quiz.py
