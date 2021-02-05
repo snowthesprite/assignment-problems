@@ -3,12 +3,12 @@
 #python Assignment_47/test_47.py
 
 
-#ghc --make Tail
-#./Tail
+#ghc --make metaFibSum
+./metaFibSum
 
 echo 
 
-g++ metaFibonacciSum.cpp -o metaFibonacciSum
+#g++ metaFibonacciSum.cpp -o metaFibonacciSum
 ./metaFibonacciSum
 
 #python Quiz.py
