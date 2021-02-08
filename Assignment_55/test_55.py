@@ -1,9 +1,5 @@
 from magic_square import *
 
-#arr = [[1,1,1], [None,None,None], [None,None,None]]
-
-#print(is_valid(arr))
-''''
 print('Does is_valid work?')
 
 arr1 = [[1,2,None],
@@ -30,7 +26,6 @@ arr4 = [[None,None,None],
 
 assert is_valid(arr4) == True, 'False where it should be True'
 
-print('Yes it does')
+print('Yes it does', "\n")
 
-#make_arr()
-'''
+print(make_arr())
