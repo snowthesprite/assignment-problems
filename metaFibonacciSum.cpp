@@ -3,29 +3,33 @@
 
 int metaFibonacciSum(int n)
 {
-    int fibArray[n] = {0, 1};
+    if (n < 2) {
+        return n;
+    }
+
+    int terms[n] = {0, 1};
 
     for (int index = 2; index < n + 1; index++) {
-        fibArray[index] = fibArray[index - 1] + fibArray[index - 2];
+        terms[index] = terms[index - 1] + terms[index - 2];
     }
     
-    int fibSumArray[fibArray[n]] = {0};
+    int partialSums[terms[n]] = {0};
 
-    for (int i = 1; i < fibArray[n] + 1; i++) {
+    for (int i = 1; i < terms[n] + 1; i++) {
         if (i <= n ) {
-            fibSumArray[i] = fibSumArray[i-1] + fibArray[i];
+            partialSums[i] = partialSums[i-1] + terms[i];
         }
         else {
-            fibSumArray[i] = fibSumArray[i-1] + fibSumArray[i-2] + 1;
+            partialSums[i] = partialSums[i-1] + partialSums[i-2] + 1;
         }
     }
 
-    int fibSum = 0;
+    int sum = 0;
 
     for (int k = 0 ; k < n + 1; k++) {
-        fibSum = fibSum + fibSumArray[fibArray[k]];
+        sum = sum + partialSums[terms[k]];
     }
-    return fibSum;
+    return sum;
 }
 
 int main()
