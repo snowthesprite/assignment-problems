@@ -1,10 +1,10 @@
 #for when you can't commit again VVV
 #rm .git/index.lock
-#python Assignment_47/test_47.py
+python Assignment_55/test_55.py
 
 
 #ghc --make metaFibSum
-./metaFibSum
+#./metaFibSum
 
 echo 
 
