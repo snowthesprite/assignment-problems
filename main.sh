@@ -3,8 +3,8 @@
 #python Assignment_55/test_55.py
 
 
-#ghc --make metaFibSum
-#./metaFibSum finished make arr
+ghc --make firstNum
+./firstNum
 
 echo 
 
