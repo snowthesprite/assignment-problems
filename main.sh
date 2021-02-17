@@ -3,12 +3,12 @@
 #python Assignment_55/test_55.py
 
 
-ghc --make firstNum
-./firstNum
+#ghc --make test
+#./test
 
-echo 
+#echo 
 
-#g++ metaFibonacciSum.cpp -o metaFibonacciSum
-#./metaFibonacciSum
+g++ simpleSort.cpp -o simpleSort
+#./simpleSort
 
 #python Quiz.py
