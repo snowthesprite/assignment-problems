@@ -1,6 +1,6 @@
 #for when you can't commit again VVV
 #rm .git/index.lock
-#python Assignment_55/test_55.py
+python Assignment_60/test_60.py
 
 
 #ghc --make test
@@ -8,7 +8,7 @@
 
 #echo 
 
-g++ simpleSort.cpp -o simpleSort
+#g++ simpleSort.cpp -o simpleSort
 #./simpleSort
 
 #python Quiz.py
