@@ -8,7 +8,7 @@ python Assignment_62/test_62.py
 
 #echo 
 
-#g++ simpleSort.cpp -o simpleSort
-#./simpleSort
+#g++ sumMatrix.cpp -o sumMatrix
+./sumMatrix
 
 #python Quiz.py
