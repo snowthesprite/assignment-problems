@@ -1,6 +1,6 @@
 #for when you can't commit again VVV
 #rm .git/index.lock
-python Assignment_61/test_61.py
+python Assignment_62/test_62.py
 
 
 #ghc --make test
