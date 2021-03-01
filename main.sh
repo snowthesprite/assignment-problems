@@ -1,14 +1,14 @@
 #for when you can't commit again VVV
 #rm .git/index.lock
-python Assignment_62/test_62.py
+#python Assignment_62/test_62.py
 
 
-#ghc --make test
-#./test
+ghc --make merge
+./merge
 
-#echo 
+echo 
 
-#g++ sumMatrix.cpp -o sumMatrix
-./sumMatrix
+#g++ Quiz2.cpp -o Quiz2
+#./Quiz2
 
-#python Quiz.py
+#python Quiz2.py
