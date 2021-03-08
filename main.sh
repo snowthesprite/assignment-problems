@@ -3,12 +3,12 @@
 #python Assignment_62/test_62.py
 
 
-ghc --make merge
-./merge
+#ghc --make quiz2
+#./quiz2
 
 echo 
 
-#g++ Quiz2.cpp -o Quiz2
-#./Quiz2
+g++ dotProduct.cpp -o dotProduct
+./dotProduct
 
 #python Quiz2.py

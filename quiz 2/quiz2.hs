@@ -8,6 +8,6 @@ calcPoints n
 
 calcTotalPoints l = sum([calcPoints x | x <- l])
 
-calcGPA list = (calcTotalPoints list) / (length list)
+calcGPA list = fromIntegral(calcTotalPoints list) / fromIntegral(length list)
 
 main = print( calcGPA ['A', 'B', 'B', 'C', 'C', 'C', 'D', 'F'] )
