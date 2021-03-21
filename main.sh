@@ -8,7 +8,7 @@
 
 echo 
 
-g++ dotProduct.cpp -o dotProduct
-./dotProduct
+g++ arrayMem.cpp -o arrayMem
+./arrayMem
 
 #python Quiz2.py
